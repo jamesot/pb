@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:circleprogress="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="60dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <!--<tools.moh.kenya.CircleProgress
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            circleprogress:color1="@android:color/holo_red_light"
+            circleprogress:color2="@android:color/holo_green_light"
+            circleprogress:color3="@android:color/holo_blue_light" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="24dp">
+
+            <!--  <ImageView
+                  android:id="@+id/img"
+                  android:layout_width="wrap_content"
+                  android:layout_height="72dp"
+                  android:layout_gravity="center_horizontal"
+                  android:layout_marginBottom="24dp"
+                  android:src="@drawable/tools" />-->
+
+            <!-- Name Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/input_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                    android:inputType="textCapWords" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <!-- Paybill Number Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/paybill_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Paybill/Buy goods number"
+                    android:inputType="textCapWords" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose below if it's a paybill or a Buy Goods Number"
+                 />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioGroup
+                    android:id="@+id/radioOptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/Paybill"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="2dp"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:gravity="right"
+                        android:text="Paybill Number"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content" />
+
+                    <RadioButton
+                        android:id="@+id/BuyGoods"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="Buy Goods and Services"
+                        android:textSize="16sp" />
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <!--  Email Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/input_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!--  description Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter short description"
+                    android:inputType="text" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/buttonChoose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose Advertisement Image"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/imageChosen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Photo selected"
+                android:textColor="@color/colorAccent"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(Optional and should be less than 1MB)"
+                android:textColor="@color/colorAccent"
+                 />
+
+            <Button
+                android:id="@+id/buttonChooseVideo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose Advertisement Video"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/imageChosenVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Video selected"
+                android:textColor="@color/colorAccent"
+                android:visibility="invisible" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Image name" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <!-- Submit Button -->
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_submit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="24dp"
+                android:background="@color/colorPrimary"
+                android:padding="12dp"
+                android:text="Submit"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <!--<TextView
+                android:id="@+id/link_login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:gravity="center"
+                android:text="Already a member? AdminLogin"
+                android:textSize="16dip" />-->
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</ScrollView>

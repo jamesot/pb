@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/login"
+    android:title="Add Paybill"
+    android:showAsAction="always"
+    android:orderInCategory="100"
+    />
+
+    <item android:id="@+id/delete"
+        android:title="Delete Paybill"
+        android:showAsAction="always"
+        android:orderInCategory="100"
+        />
+    <item android:id="@+id/adhome"
+        android:title="Add Home Advert"
+        android:showAsAction="always"
+        android:orderInCategory="100"
+        />
+
+
+</menu>
